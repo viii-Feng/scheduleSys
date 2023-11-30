@@ -1,8 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;
+  <component name="ChangeListManager">
+    <list default="true" id="95cae823-073c-494c-8464-b577bd190f17" name="Changes" comment="database&amp;Dao&amp;JDBC">
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/GrammarParser.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/GrammarParser.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/Grammar_Realize.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/LexRealize.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/LexRealize.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/base.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/widget.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/widget.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/widget.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/wight.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/scheduleSys_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/BaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/SysScheduleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/SysUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/impl/SysScheduleDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/impl/SysUserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/pojo/SysSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/pojo/SysUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/test/TestSysScheduleAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/test/testBaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/util/JDBCUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.1.21.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/lombok-1.18.24.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.25.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../..//aGrammar_Realize/Semantic.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../..//aGrammar_Realize/Semantic.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheduleSys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scheduleSys.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Yr7MpfSn1LnVlLKxaLGd2W8ool" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Javacode/scheduleSys/web/WEB-INF/lib/mysql-connector-java-8.0.25.jar",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Javacode\scheduleSys\resources" />
+      <recent name="D:\Javacode\scheduleSys\web\WEB-INF\lib" />
+      <recent name="D:\Javacode\scheduleSys" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestSysScheduleAdd.test">
+    <configuration name="TestSysScheduleAdd.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scheduleSys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oneschedule.schedule.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.oneschedule.schedule.test" />
+      <option name="MAIN_CLASS_NAME" value="com.oneschedule.schedule.test.TestSysScheduleAdd" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testBaseDao.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scheduleSys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oneschedule.schedule.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.oneschedule.schedule.test" />
+      <option name="MAIN_CLASS_NAME" value="com.oneschedule.schedule.test.testBaseDao" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestSysScheduleAdd.test" />
+        <item itemvalue="JUnit.testBaseDao.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95cae823-073c-494c-8464-b577bd190f17" name="Changes" comment="" />
+      <created>1701271801656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701271801656</updated>
+      <workItem from="1701271811572" duration="590000" />
+      <workItem from="1701331982161" duration="6381000" />
+      <workItem from="1701351745775" duration="4651000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="database&amp;Dao&amp;JDBC" />
+    <option name="LAST_COMMIT_MESSAGE" value="database&amp;Dao&amp;JDBC" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
 </project>
