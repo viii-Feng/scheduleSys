@@ -27,7 +27,7 @@ import java.lang.reflect.Method;
  * 改：/schedule/update
  * 查： /schedule/find
  */
-@WebServlet("/schedule/*")
+@WebServlet(value="/schedule/*",name="scheduleServlet")
 public class SysScheduleController  extends BaseController {
 
     protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

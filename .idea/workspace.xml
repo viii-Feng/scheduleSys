@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95cae823-073c-494c-8464-b577bd190f17" name="Changes" comment="database&amp;Dao&amp;JDBC">
+    <list default="true" id="95cae823-073c-494c-8464-b577bd190f17" name="Changes" comment="login&amp;regist_MVC">
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/GrammarParser.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/GrammarParser.h" afterDir="false" />
@@ -19,26 +19,12 @@
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/widget.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/widget.ui" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/wight.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysScheduleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/service/SysScheduleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/service/SysUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/service/impl/SysScheduleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/util/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/loginUserPwdError.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/loginUsernameError.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/registFail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/registSuccess.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/showSchedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/filter/LoginFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../..//aGrammar_Realize/Semantic.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../..//aGrammar_Realize/Semantic.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regist.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/regist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/SysUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/SysUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/impl/SysUserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/dao/impl/SysUserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysScheduleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysUserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,29 +60,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Javacode/scheduleSys/web/WEB-INF",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Javacode/scheduleSys/web/WEB-INF&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Javacode\scheduleSys\web\WEB-INF" />
@@ -341,7 +327,10 @@
       <workItem from="1701399543514" duration="1320000" />
       <workItem from="1701431018470" duration="2235000" />
       <workItem from="1701436502600" duration="102000" />
-      <workItem from="1701436629114" duration="6261000" />
+      <workItem from="1701436629114" duration="6556000" />
+      <workItem from="1701478791378" duration="246000" />
+      <workItem from="1701587160890" duration="274000" />
+      <workItem from="1701760835404" duration="2119000" />
     </task>
     <task id="LOCAL-00001" summary="database&amp;Dao&amp;JDBC">
       <created>1701356603824</created>
@@ -350,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701356603825</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="login&amp;regist_MVC">
+      <created>1701443194148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701443194148</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +365,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="database&amp;Dao&amp;JDBC" />
-    <option name="LAST_COMMIT_MESSAGE" value="database&amp;Dao&amp;JDBC" />
+    <MESSAGE value="login&amp;regist_MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="login&amp;regist_MVC" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
