@@ -56,6 +56,32 @@
                 usernameMsgSpan.innerText="不合法"
                 return false
             }
+            /**
+             * 响应乱码
+             * 响应格式不规范：后端响应信息应该有统一格式：JSON{
+             *
+             * }
+             * 校验不通过,但函数仍然返回true，无法阻止表单提交：
+             * 未来使用vue axios 结合promise处理
+             */
+            //格式正确后，需要继续检验用户名是否被占用
+            var request = new XMLHttpRequest();
+            //设置回调函数
+            request.onreadystatechange=function (){
+                if(request.readyState==4 && request.status==200){
+                   var result=JSON.parse(request.responseText)
+                    if(result.code==200){
+                        usernameMsgSpan.innerText="可用"
+                    } else if (result.code==505){
+                        usernameMsgSpan.innerText="被占用"
+                    }
+                }
+            }
+            //设置请求方式和请求资源路径
+            request.open("GET","/user/checkUsernameUsed?username="+username);
+            //发送请求
+            request.send();
+
             usernameMsgSpan.innerText="OK"
             return true
 

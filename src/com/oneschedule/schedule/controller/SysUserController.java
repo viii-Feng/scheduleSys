@@ -1,9 +1,13 @@
 package com.oneschedule.schedule.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.oneschedule.schedule.common.Result;
+import com.oneschedule.schedule.common.ResultCodeEnum;
 import com.oneschedule.schedule.pojo.SysUser;
 import com.oneschedule.schedule.service.SysUserService;
 import com.oneschedule.schedule.service.impl.SysUserServiceImpl;
 import com.oneschedule.schedule.util.MD5Util;
+import com.oneschedule.schedule.util.WebUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.ServletSecurity;
 import jakarta.servlet.annotation.WebServlet;
@@ -13,6 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 
 /**
  * ClassName: SysUserController
@@ -78,5 +83,25 @@ public class SysUserController extends BaseController {
 
             resp.sendRedirect("/showSchedule.html");
         }
+    }
+
+    /**
+     * 校验注册用户名是否被占用
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void checkUsernameUsed(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //接受用户名
+        final String username = req.getParameter("username");
+        //调用服务层方法
+        final SysUser sysUser = userService.findByUsername(username);
+        //如果有，响应已占用，没有，响应可用
+        Result result=Result.ok(null);
+        if(null !=sysUser){
+            result=Result.build(null, ResultCodeEnum.USERNAME_USED);
+        }
+        WebUtil.writeJson(resp,result);
     }
 }
