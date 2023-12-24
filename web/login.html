@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+
+        .ht{
+            text-align: center;
+            color: cadetblue;
+            font-family: 幼圆;
+        }
+        .tab{
+            width: 500px;
+            border: 5px solid cadetblue;
+            margin: 0px auto;
+            border-radius: 5px;
+            font-family: 幼圆;
+        }
+        .ltr td{
+            border: 1px solid  powderblue;
+
+        }
+        .ipt{
+            border: 0px;
+            width: 50%;
+
+        }
+        .btn1{
+            border: 2px solid powderblue;
+            border-radius: 4px;
+            width:60px;
+            background-color: antiquewhite;
+
+        }
+        #usernameMsg , #userPwdMsg {
+            color: #d55826;
+        }
+
+        .buttonContainer{
+            text-align: center;
+        }
+    </style>
+
+    <!--Now it's my turn -->
+    <script>
+
+        // 校验用户名的方法
+        function checkUsername(){
+            // 定义正则
+            var usernameReg=/^[a-zA-Z0-9]{5,10}$/
+            //获得用户在页面上输入的信息
+            var username =document.getElementById("usernameInput").value
+            var usernameMsgSpan =document.getElementById("usernameMsg")
+            if(!usernameReg.test(username)){
+                usernameMsgSpan.innerText="不合法"
+                return false
+            }
+            /**
+             * 响应乱码
+             * 响应格式不规范：后端响应信息应该有统一格式：JSON{
+             *
+             * }
+             * 校验不通过,但函数仍然返回true，无法阻止表单提交：
+             * 未来使用vue axios 结合promise处理
+             */
+            //格式正确后，需要继续检验用户名是否被占用
+            var request = new XMLHttpRequest();
+            //设置回调函数
+            request.onreadystatechange=function (){
+                if(request.readyState==4 && request.status==200){
+                   var result=JSON.parse(request.responseText)
+                    if(result.code==200){
+                        usernameMsgSpan.innerText="可用"
+                    } else if (result.code==505){
+                        usernameMsgSpan.innerText="被占用"
+                    }
+                }
+            }
+            //设置请求方式和请求资源路径
+            request.open("GET","/user/checkUsernameUsed?username="+username);
+            //发送请求
+            request.send();
+
+            usernameMsgSpan.innerText="OK"
+            return true
+
+        }
+
+
+        // 校验密码的方法
+        function checkUserPwd(){
+            // 定义正则
+            var passwordReg=/^[0-9]{6}$/
+            var userPwd =document.getElementById("userPwdInput").value
+            var userPwdMsgSpan =document.getElementById("userPwdMsg")
+            if(!passwordReg.test(userPwd)){
+                userPwdMsgSpan.innerText="不合法"
+                return false
+            }
+            userPwdMsgSpan.innerText="OK"
+            return true
+        }
+
+        //表单提交时统一校验
+        function checkForm(){
+
+            var f1 = checkUsername()
+            var f2 = checkUserPwd()
+            //只有在都为true时才会提交
+            return f1 && f2
+        }
+    </script>
+</head>
+
+<body>
+<h1 class="ht">欢迎使用日程管理系统</h1>
+<h3 class="ht">请登录</h3>
+<form method="post" action="/user/login" onsubmit="return checkForm()">
+    <table class="tab" cellspacing="0px">
+        <tr class="ltr">
+            <td>请输入账号</td>
+            <td>
+                <input class="ipt" type="text" id="usernameInput" name="username" onblur="checkUsername()">
+                <span id="usernameMsg"></span>
+            </td>
+        </tr>
+        <tr class="ltr">
+            <td>请输入密码</td>
+            <td>
+                <input class="ipt" type="password" id="userPwdInput"  name="userPwd" onblur="checkUserPwd()">
+                <span id="userPwdMsg"></span>
+            </td>
+        </tr>
+        <tr class="ltr">
+            <td colspan="2" class="buttonContainer">
+                <input class="btn1" type="submit" value="登录">
+                <input class="btn1" type="reset" value="重置">
+                <button class="btn1"><a href="/regist.html">去注册</a></button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
