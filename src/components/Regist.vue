@@ -1,5 +1,10 @@
 <script setup>
      import {ref,reactive} from 'vue';
+     /*导入发送请求对象 */
+     import request from"../utils/requst"
+     import {useRouter} from 'vue-router'
+     const router=useRouter()
+
 
     let registUser=reactive(
         {
@@ -12,11 +17,18 @@
     let userPwdMsg=ref("")
     let reUserPwdMsg=ref("")
     let reUserPwd=ref("")
-    function checkUsername(){
+    async function checkUsername(){
         let usernameReg=/^[a-zA-Z0-9]{5,10}$/
         if(!usernameReg.test(registUser.username)){
             usernameMsg.value="格式有误"
             return false   
+        }
+         //校验用户名是否被占用
+        let {data}=await request.post(`user/checkUsernameUsed?username=${registUser.username}`)
+        console.log(data)
+        if(data.code != 200){
+            usernameMsg.value="用户名占用"
+            return false
         }
         usernameMsg.value="OK"
         return true   
@@ -28,6 +40,9 @@
             userPwdMsg.value="格式有误"
             return false   
         }
+
+
+
         userPwdMsg.value="OK"
         return true  
     }
@@ -45,6 +60,27 @@
         }
         reUserPwdMsg.value="OK"
         return true  
+
+    }
+    //注册功能
+    async function regist(){
+        let flag1=await checkUsername()
+        let flag2=await checkUserPwd()
+        let flag3=await checkReUserPwd()
+        if(flag1 && flag2 && flag3){
+            let {data}=await request.post("user/regist",registUser)
+            if(data.code==200){
+                //注册成功，登录页
+                alert("注册成功，请去登录")
+                router.push("/login")
+
+            }else{
+                alert("用户名被占用")
+            }
+
+        }else{
+            alert("检验不通过，请再次检查数据")
+        }
 
     }
 
@@ -96,7 +132,7 @@
         </tr>
         <tr class="ltr">
             <td colspan="2" class="buttonContainer">
-                <input class="btn1" type="button" value="注册">
+                <input class="btn1" type="button" @click="regist()" value="注册">
                 <input class="btn1" type="button" value="重置">
                 <router-link to="/login">
                   <button class="btn1">去登录</button>
