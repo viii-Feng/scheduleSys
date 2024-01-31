@@ -2,7 +2,7 @@ package com.oneschedule.schedule.test;
 
 import com.oneschedule.schedule.dao.BaseDao;
 import com.oneschedule.schedule.pojo.SysUser;
-import org.junit.BeforeClass;
+import org.testng.annotations.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
