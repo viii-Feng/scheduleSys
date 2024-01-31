@@ -47,7 +47,21 @@
         return true  
 
     }
+    //注册方法
+    async function regist(){
+        //校验所有输入方法是否合法
+        let flag1=await checkUsername()
+        let flag2=await checkUserPwd()
+        let flag3=await checkReUserPwd()
+        if(flag1 && flag2 && flag3){
+            alert("校验成功 发送请求注册")
+        }
+        else{
+            alert("校验不通过，请检查数据")
+        }
 
+
+    }
 
 
 
@@ -96,7 +110,7 @@
         </tr>
         <tr class="ltr">
             <td colspan="2" class="buttonContainer">
-                <input class="btn1" type="button" value="注册">
+                <input class="btn1" type="button" @click="regist()" value="注册">
                 <input class="btn1" type="button" value="重置">
                 <router-link to="/login">
                   <button class="btn1">去登录</button>

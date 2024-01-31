@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95cae823-073c-494c-8464-b577bd190f17" name="Changes" comment="Ajax &amp; JSON">
+    <list default="true" id="95cae823-073c-494c-8464-b577bd190f17" name="Changes" comment="regist&amp;login(back)">
       <change afterPath="$PROJECT_DIR$/../..//Javacode/Spring6/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//Javacode/Spring6/spring-first/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/.gitignore" afterDir="false" />
@@ -21,13 +21,13 @@
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/widget.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/widget.ui" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../..//大三上/编译原理/Grammar_Realize/wight.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/filter/CrosFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../..//aGrammar_Realize/Semantic.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../..//aGrammar_Realize/Semantic.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduleSys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scheduleSys.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oneschedule/schedule/filter/LoginFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oneschedule/schedule/test/testBaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/test/testBaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Regist.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Regist.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,30 +73,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.last.introduce.type": "VAR",
-    "last_opened_file_path": "D:/Javacode/scheduleSys/web/WEB-INF",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "device.file.explorer"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;VAR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Javacode/scheduleSys/web/WEB-INF&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;device.file.explorer&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Javacode\scheduleSys\web\WEB-INF" />
@@ -349,6 +349,10 @@
       <workItem from="1702442634450" duration="234000" />
       <workItem from="1703418615926" duration="712000" />
       <workItem from="1703425614622" duration="6336000" />
+      <workItem from="1703645230461" duration="669000" />
+      <workItem from="1703687664862" duration="2492000" />
+      <workItem from="1703690972153" duration="343000" />
+      <workItem from="1706671358385" duration="2559000" />
     </task>
     <task id="LOCAL-00001" summary="database&amp;Dao&amp;JDBC">
       <created>1701356603824</created>
@@ -378,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701787585869</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CrosFilter">
+      <created>1703645422158</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703645422159</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,23 +411,9 @@
     <MESSAGE value="login&amp;regist_MVC" />
     <MESSAGE value="filter" />
     <MESSAGE value="Ajax &amp; JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajax &amp; JSON" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/oneschedule/schedule/controller/SysUserController.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/oneschedule/schedule/filter/CrosFilter.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="CrosFilter" />
+    <MESSAGE value="regist&amp;login(back)" />
+    <option name="LAST_COMMIT_MESSAGE" value="regist&amp;login(back)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
