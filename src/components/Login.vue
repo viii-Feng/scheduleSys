@@ -1,5 +1,8 @@
 <script setup>
      import{ref,reactive} from 'vue'
+     import request from '../utils/requst'
+     import { useRouter } from 'vue-router';
+     const router=useRouter()
 
      let loginUser=reactive(
         {
@@ -28,6 +31,31 @@
         }
         userPwdMsg.value="OK"
         return true  
+    }
+    async function login(){
+        //校验表单格式是否正确
+        let flag1=await checkUsername()
+        let flag2=await checkUserPwd()
+        if(!(flag1 && flag2)){
+            return 
+        }
+        let {data}=await request.post("user/login",loginUser)
+        console.log(data)
+        if(data.code==200){
+            alert("登录成功")
+            //跳转到showSchedule.vue
+            router.push("/showSchedule")
+        }
+        else if(data.code==503){
+            alert("密码有误")
+        }
+        else if(data.code==501){
+            alert("用户名有误")
+        }
+        else{
+            alert("未知错误")
+        }
+
     }
 
 
@@ -59,7 +87,7 @@
             </tr>
             <tr class="ltr">
                 <td colspan="2" class="buttonContainer">
-                    <input class="btn1" type="button" value="登录">
+                    <input class="btn1" type="button" @click="login()" value="登录">
                     <input class="btn1" type="button" value="重置">
                     <router-link to="/regist">
                       <button class="btn1">去注册</button>
