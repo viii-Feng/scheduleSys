@@ -20,6 +20,8 @@ import org.junit.runner.Request;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * ClassName: SysUserController
@@ -110,7 +112,11 @@ public class SysUserController extends BaseController {
             session.setAttribute("sysUser",sysUser);
 
             resp.sendRedirect("/showSchedule.html");*/
-            result=Result.ok(null);
+            //登陆成功，将用户uid和username响应给客户端
+            Map data=new HashMap();
+            sysUser.setUserPwd("");
+            data.put("loginUser",sysUser);
+            result=Result.ok(data);
         }
         //改成result后，将登录结果返回给客户端
         WebUtil.writeJson(resp,result);
